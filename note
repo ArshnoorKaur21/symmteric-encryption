@@ -1,0 +1,36 @@
+The scrypt password-base key derivation function (pbkdf) is an algorithm designed to be brute-force resistant that
+converts human readable passwords into fixed length arrays of bytes, which can then be used as a key for symmetric 
+block ciphers, private keys, et cetera.
+
+scrypt password-base key derivation is an algorithm designed that converts human readable passwords into fixed length of 
+array of bytes that can be used as key for symmteric encyption
+
+//scryptSync
+crypto.scryptSync(password, salt, keylen[, options])
+Parameter: This method accept five parameters as mentioned above and described below:
+key
+password: It can hold string, Buffer, TypedArray, or DataView type of data.
+salt: It holds string, Buffer, TypedArray, or DataView type of data. It must be as unique as possible. Moreover, it is recommended that salt should be random and is at a minimum of 16 bytes long.
+keylen: It denotes the length of the key, and it must be a number.
+options:It is of type Object, and it has seven parameters namely cost, blockSize, parallelization, N, r, p, and maxmem.
+Return Value: It returns a buffer.
+
+
+//crypto.createCipheriv used to create cipher Object
+cypto.createCipheriv(algorithm,key,iv,options)
+
+algorithm= it is string type value dependent on OpenSSL ,example aes192 and aes256
+key= it is a raw key which is used by algorithm and iv, it holds string,buffer ,typedarray
+
+iv=it is initilzation vector that must be unique and uncertain. it can hold string,buffer or dataviewtype data
+
+options=it is an optional parameter used to control stream behaviour
+return value= cipher object
+
+fs.chmode is used to chng the permissions of given path. these permissions are specified using string constraints
+fs.chmode(path,mode,callback)
+
+path is string,buffer or url that denotes the path of the file
+mode is the octal number that dentoes tge permission to be granted 
+callback is the function called when mode is executed
+
